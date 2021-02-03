@@ -9,8 +9,6 @@ import org.springframework.web.bind.annotation.RestController;
 import security.entities.Person;
 import security.jpa.PersonJpaRepo;
 
-import java.util.List;
-
 @RestController
 public class SecurityRestController {
 

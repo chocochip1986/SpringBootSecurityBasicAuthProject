@@ -14,7 +14,12 @@
     <artifactId>SpringBootSecurityProject</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Spring Boot Security 5 Sample Project</name>
-    <description>This is a Spring Boot Security 5 Sample Project</description>
+    <description>This is a Spring Boot based multi module Spring Security 5 Sample Project</description>
+    <packaging>pom</packaging>
+    <modules>
+        <module>basic-authentication</module>
+        <module>basic-auth</module>
+    </modules>
 
     <properties>
         <maven.compiler.source>15</maven.compiler.source>
