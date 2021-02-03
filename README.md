@@ -1,3 +1,4 @@
 # Spring Boot Security Sample Project
 
-### This project shows how to use basic authentication as the main authentication method security
+## This project has a couple of sample projects in here demonstrating the use of various spring security related feartures
+* #### Basic authentication as the main authentication method security
