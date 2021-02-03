@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import security.entities.Person;
 import security.jpa.PersonJpaRepo;
 
+import java.util.Optional;
+
 @RestController
 public class SecurityRestController {
 
@@ -20,7 +22,8 @@ public class SecurityRestController {
 
     @GetMapping(value = "/person/{name}")
     public ResponseEntity<String> person(@PathVariable("name") String name) {
-        return new ResponseEntity<>(personJpaRepo.findByName(name).orElse(null).toString(), HttpStatus.OK);
+        Person person = personJpaRepo.findByName(name).orElse(null);
+        return new ResponseEntity<>(person == null ? "Nothing" : person.getName(), HttpStatus.OK);
     }
 
     @PostMapping(value = "/person")
