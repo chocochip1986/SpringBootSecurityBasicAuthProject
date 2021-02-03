@@ -27,7 +27,7 @@ public class SecurityRestController {
     }
 
     @PostMapping(value = "/person")
-    public ResponseEntity<String> person(){
+    public ResponseEntity<String> person(Authentication authentication){
         return new ResponseEntity<>(personJpaRepo.save(Person.builder().name("Name "+System.currentTimeMillis()).build()).getName(), HttpStatus.OK);
     }
 
