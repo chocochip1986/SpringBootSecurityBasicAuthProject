@@ -17,8 +17,8 @@
     <description>This is a Spring Boot based multi module Spring Security 5 Sample Project</description>
     <packaging>pom</packaging>
     <modules>
-        <module>basic-authentication</module>
         <module>basic-auth</module>
+        <module>basic-auth-with-db-verification</module>
     </modules>
 
     <properties>
