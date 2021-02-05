@@ -19,6 +19,7 @@
     <modules>
         <module>basic-auth</module>
         <module>basic-auth-with-db-verification</module>
+        <module>multi-encryption-support-with-basic-http-auth-and-db-verify</module>
     </modules>
 
     <properties>
