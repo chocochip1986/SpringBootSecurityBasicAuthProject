@@ -1,6 +1,8 @@
 spring:
   profiles:
     active: local
+  server:
+    port: 9998
   h2:
     console:
       enabled: true
@@ -20,5 +22,3 @@ spring:
       org:
         springframework:
           security: DEBUG
-server:
-  port: 9998
