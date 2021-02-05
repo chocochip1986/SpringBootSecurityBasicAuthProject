@@ -32,7 +32,7 @@ public class SecurityConfigs extends WebSecurityConfigurerAdapter {
                 .authorizeRequests()
                 .antMatchers(HttpMethod.POST, "/api/v1/user**").permitAll()
                 .antMatchers("/", "/h2-console/**").permitAll()
-                .anyRequest().authenticated();
+                .anyRequest().authenticated().and().httpBasic();
 
         http.headers().frameOptions().disable();
     }

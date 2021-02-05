@@ -37,6 +37,6 @@ public class UserService {
     }
 
     private String encryptPassword(String rawStringFormOfPassword) {
-        return EncryptEnum.BCRYPT.tag()+bCryptPasswordEncoder.encode(rawStringFormOfPassword);
+        return bCryptPasswordEncoder.encode(rawStringFormOfPassword);
     }
 }

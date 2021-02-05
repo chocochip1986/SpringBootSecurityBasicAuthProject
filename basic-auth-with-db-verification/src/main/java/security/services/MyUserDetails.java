@@ -35,12 +35,16 @@ public class MyUserDetails implements UserDetails {
 
     @Override
     public boolean isAccountNonExpired() {
-        return user.getExpiredAt().isAfter(LocalDateTime.now());
+        if ( user.getExpiredAt() == null || user.getExpiredAt().isAfter(LocalDateTime.now()) ) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return user.isLocked();
+        return !user.isLocked();
     }
 
     @Override
