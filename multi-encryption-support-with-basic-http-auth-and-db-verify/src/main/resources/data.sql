@@ -1,1 +1,3 @@
 INSERT INTO user (id, username, password, created_at, updated_at, is_enabled, is_locked) VALUES(1, 'User1', '{bcrypt}$2a$10$1gPTHFT6u/X4TY4Lhs7N1ejA8ZP1yB0ZX2QkurWyGIxXEDz3EFOkG', current_timestamp, current_timestamp, true, false);
+INSERT INTO user (id, username, password, created_at, updated_at, is_enabled, is_locked) VALUES(2, 'User2', '{MD5}5f4dcc3b5aa765d61d8327deb882cf99', current_timestamp, current_timestamp, true, false);
+INSERT INTO user (id, username, password, created_at, updated_at, is_enabled, is_locked) VALUES(3, 'User3', '{noop}password', current_timestamp, current_timestamp, true, false);
