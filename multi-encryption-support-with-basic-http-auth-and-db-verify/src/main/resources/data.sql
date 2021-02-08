@@ -1,0 +1,1 @@
+INSERT INTO user (id, username, password, created_at, updated_at, is_enabled, is_locked) VALUES(1, 'User1', '{bcrypt}$2a$10$1gPTHFT6u/X4TY4Lhs7N1ejA8ZP1yB0ZX2QkurWyGIxXEDz3EFOkG', current_timestamp, current_timestamp, true, false);
