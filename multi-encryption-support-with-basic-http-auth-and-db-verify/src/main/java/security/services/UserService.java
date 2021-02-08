@@ -1,7 +1,7 @@
 package security.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import security.entities.User;
 import security.jpa.UserJpaRepo;
@@ -14,7 +14,7 @@ public class UserService {
     private UserJpaRepo userJpaRepo;
 
     @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
+    private PasswordEncoder passwordEncoder;
 
     public User retrieveUser(String username) {
         Optional<User> user = userJpaRepo.findByUsername(username);
@@ -35,6 +35,6 @@ public class UserService {
     }
 
     private String encryptPassword(String rawStringFormOfPassword) {
-        return bCryptPasswordEncoder.encode(rawStringFormOfPassword);
+        return passwordEncoder.encode(rawStringFormOfPassword);
     }
 }
